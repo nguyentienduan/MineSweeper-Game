@@ -11,7 +11,7 @@
 
 🚩 Flagging Mines: Use flags to mark potential mine locations and strategize your moves.
 
-⚙️ Installation
+## ⚙️ Installation
 1. Clone the repository:
 
    ```bash
