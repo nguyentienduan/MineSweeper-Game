@@ -38,6 +38,9 @@
 ## 📝 How to Play
 
 1.Click on any cell on the board to reveal its content.
+
 2.Use the numbers revealed to deduce the locations of mines.
+
 3.Right-click on a cell to place a flag if you suspect it contains a mine.
+
 4.Clear all non-mine cells to win the game. Be careful not to detonate any mines!
