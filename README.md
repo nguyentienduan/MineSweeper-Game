@@ -12,42 +12,28 @@
 🚩 Flagging Mines: Use flags to mark potential mine locations and strategize your moves.
 
 ⚙️ Installation
-Clone the repository:
+1. Clone the repository:
 
-bash
-Copy code
-git clone https://github.com/nguyentienduan/MineSweeper-Game.git
-Navigate to the project directory:
+   ```bash
+   git clone https://github.com/nguyentienduan/MineSweeper-Game.git
+2. Navigate to the project directory:
 
-bash
-Copy code
-cd MineSweeper-Game
-Create a virtual environment
-
-bash
-Copy code
-python3 -m venv env
-Activate the virtual environment:
-
-On Windows:
-bash
-Copy code
-env\Scripts\activate
-On macOS and Linux:
-bash
-Copy code
-source env/bin/activate
-Install required dependencies:
-
-bash
-Copy code
-pip install -r requirements.txt
-Run the Flask application:
-
-bash
-Copy code
-python app.py
-Open a web browser and go to http:127.0.0.1:5000 to start playing Minesweeper!
+    ```bash
+    cd MineSweeper-Game
+3. Create a virtual environment
+    ```bash
+    python3 -m venv env
+4. Activate the virtual environment:
+    - On Windows:
+      ```bash
+      env\Scripts\activate
+    - On macOS and Linux:
+      ```bash
+      source env/bin/activate
+5. Run the Flask application:
+    ```bash
+    python app.py
+6. Open a web browser to `http:127.0.0.1:5000` to access the application.
 
 📝 How to Play
 Click on any cell on the board to reveal its content.
