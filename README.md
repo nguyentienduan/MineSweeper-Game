@@ -1,10 +1,10 @@
 # Minesweeper game
 ![11](https://github.com/nguyentienduan/MineSweeper-Game/assets/118033554/df23f3f6-236b-471e-9c2c-62c606f2e8fb)
 
-🚀 Welcome to Minesweeper Game!
-This project aims to provide a fun and interactive Minesweeper game experience. Players can enjoy the classic Minesweeper gameplay with a user-friendly interface and customizable settings.
+###🚀 Welcome to Minesweeper Game!
+###This project aims to provide a fun and interactive Minesweeper game experience. Players can enjoy the classic Minesweeper gameplay with a user-friendly interface.
 
-🎮 Features
+##🎮 Features
 🧨 Classic Gameplay: Experience the timeless Minesweeper gameplay where you clear the board without detonating any mines.
 
 💣 Customizable Board: Adjust the size of the board and the number of mines to tailor the game to your preferences and skill level.
