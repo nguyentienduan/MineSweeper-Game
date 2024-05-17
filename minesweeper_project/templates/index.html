@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <style>
+        .board {
+            display: grid;
+            grid-template-columns: repeat(20, 30px);
+            grid-template-rows: repeat(20, 30px);
+            grid-gap: 2px;
+        }
+        .cell {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 30px;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+        .flag {
+            background-color: yellow;
+        }
+        .mine {
+            background-color: red;
+        }
+        .mine-clicked {
+            background-color: black;
+            color: white;
+        }
+        .disabled {
+            background-color: lightgrey;
+            cursor: default;
+        }
+        .revealed {
+            background-color: lightgrey;
+        }
+        #turn {
+            margin-bottom: 10px;
+        }
+        #new-game {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Minesweeper</h1>
+    <div>
+        <span id="turn">{{ game_state.turn }}</span>
+        <button id="new-game" onclick="newGame()">New Game</button>
+    </div>
+    <div class="board" id="board"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
