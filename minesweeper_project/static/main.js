@@ -1,6 +1,6 @@
 // main.js
 
-const SIZE = 20;
+const SIZE = 10;
 
 function renderBoard(board, flags, revealed, gameOver) {
     const boardDiv = document.getElementById('board');

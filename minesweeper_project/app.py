@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import random
 
 app = Flask(__name__)
-SIZE = 20
+SIZE = 10
 MINES = 20
 
 game_state = {

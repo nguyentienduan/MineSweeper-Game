@@ -5,11 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minesweeper</title>
     <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #4e54c8, #8f94fb); /* Gradient background */
+            overflow: hidden; /* Hide overflow to prevent scrollbars */
+            position: relative; /* Position relative for absolute positioning */
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #fff; /* White title color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+            animation: float 5s infinite alternate; /* Animation for title */
+        }
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            background-color: rgba(255, 255, 255, 0.8); /* Light background color */
+            position: relative;
+            z-index: 1; /* Ensure game container is above motion effects */
+        }
+        .star {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 6px;
+            height: 6px;
+            background-color: #fff; /* White star color */
+            border-radius: 50%;
+            animation: twinkle 3s infinite; /* Animation for twinkling */
+        }
+        .star.large {
+            width: 12px;
+            height: 12px;
+            animation: twinkle 2s infinite; /* Faster twinkle for larger stars */
+        }
+        .star:nth-child(1) {
+            top: 20%;
+            left: 20%;
+        }
+        .star:nth-child(2) {
+            top: 30%;
+            left: 70%;
+        }
+        .star:nth-child(3) {
+            top: 70%;
+            left: 10%;
+        }
+        .star:nth-child(4) {
+            top: 80%;
+            left: 80%;
+        }
+        .star:nth-child(5) {
+            top: 10%;
+            left: 40%;
+        }
+        .star:nth-child(6) {
+            top: 40%;
+            left: 30%;
+        }
+        .star:nth-child(7) {
+            top: 60%;
+            left: 60%;
+        }
+        .star:nth-child(8) {
+            top: 90%;
+            left: 20%;
+        }
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
         .board {
             display: grid;
-            grid-template-columns: repeat(20, 30px);
-            grid-template-rows: repeat(20, 30px);
+            grid-template-columns: repeat(10, 30px);
+            grid-template-rows: repeat(10, 30px);
             grid-gap: 2px;
+            margin-top: 10px;
         }
         .cell {
             width: 30px;
@@ -19,6 +116,7 @@
             line-height: 30px;
             border: 1px solid #000;
             cursor: pointer;
+            border-radius: 4px;
         }
         .flag {
             background-color: yellow;
@@ -39,6 +137,8 @@
         }
         #turn {
             margin-bottom: 10px;
+            font-size: 1.2em;
+            color: #333; /* Text color */
         }
         #new-game {
             background-color: #4CAF50;
@@ -53,15 +153,29 @@
             cursor: pointer;
             border-radius: 8px;
         }
+        #new-game:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
     <h1>Minesweeper</h1>
-    <div>
-        <span id="turn">{{ game_state.turn }}</span>
-        <button id="new-game" onclick="newGame()">New Game</button>
+    <div class="game-container">
+        <div>
+            <span id="turn">{{ game_state.turn }}</span>
+            <button id="new-game" onclick="newGame()">New Game</button>
+        </div>
+        <div class="board" id="board"></div>
     </div>
-    <div class="board" id="board"></div>
+    <!-- Stars motion effects -->
+    <div class="star large"></div>
+    <div class="star large"></div>
+    <div class="star large"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ url_for('static', filename='main.js') }}"></script>
