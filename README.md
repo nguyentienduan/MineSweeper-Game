@@ -36,6 +36,7 @@
 6. Open a web browser to `http:127.0.0.1:5000` to access the application.
 
 ## 📝 How to Play
+
 1.Click on any cell on the board to reveal its content.
 2.Use the numbers revealed to deduce the locations of mines.
 3.Right-click on a cell to place a flag if you suspect it contains a mine.
